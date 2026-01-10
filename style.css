@@ -10,11 +10,13 @@
 body {
   background: #05060a;
   color: #ffffff;
-  overflow-x: hidden;
+  line-height: 1.6;
 }
 
+/* HERO */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,22 +25,32 @@ body {
 }
 
 .hero h1 {
-  font-size: 3.5rem;
-  letter-spacing: 4px;
+  font-size: 2.6rem;
+  letter-spacing: 3px;
 }
 
 .hero p {
-  opacity: 0.8;
-  margin: 15px 0;
+  margin-top: 12px;
+  opacity: 0.85;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 320px;
 }
 
 .btn {
-  margin-top: 20px;
-  padding: 12px 28px;
+  padding: 14px;
+  text-decoration: none;
   border: 1px solid #00e0ff;
   color: #00e0ff;
-  text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s ease;
+  text-align: center;
 }
 
 .btn:hover {
@@ -46,26 +58,73 @@ body {
   color: #000;
 }
 
+.btn.primary {
+  background: #00e0ff;
+  color: #000;
+}
+
+.btn.primary:hover {
+  background: transparent;
+  color: #00e0ff;
+}
+
+/* SECTIONS */
 .section {
-  padding: 80px 10%;
+  padding: 70px 20px;
   text-align: center;
 }
 
+.section h2 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+/* CARDS */
 .cards {
   display: flex;
+  flex-direction: column;
   gap: 20px;
-  justify-content: center;
   margin-top: 30px;
 }
 
 .card {
-  padding: 30px;
+  padding: 25px;
   border: 1px solid #222;
-  width: 200px;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .card:hover {
   border-color: #00e0ff;
-  transform: translateY(-6px);
+  transform: translateY(-4px);
+}
+
+/* CONTACT */
+.contact p {
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+/* DESKTOP ENHANCEMENTS */
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    max-width: none;
+  }
+
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card {
+    width: 220px;
+  }
+
+  .section {
+    padding: 90px 10%;
+  }
 }
