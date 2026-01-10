@@ -126,5 +126,43 @@ body {
 
   .section {
     padding: 90px 10%;
+.dark {
+  background: #070810;
+}
+
+.muted {
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.card {
+  padding: 22px;
+  border: 1px solid #222;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  border-color: #00e0ff;
+  transform: translateY(-4px);
+}
+
+@media (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 230px;
+  }
+}
   }
 }
