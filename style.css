@@ -166,3 +166,12 @@ body {
 }
   }
 }
+.link-card {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.link-card:hover {
+  color: #00e0ff;
+}
